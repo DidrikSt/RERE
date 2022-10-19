@@ -7,8 +7,8 @@ import {
   Text,
   Alert,
   Image,
+  Dimensions,
 } from "react-native";
-import { styles } from "../App";
 import { useState } from "react";
 function HomeScreen({ navigation }) {
   const [count, setCount] = useState(0);
@@ -117,3 +117,75 @@ function HomeScreen({ navigation }) {
   );
 }
 export { HomeScreen };
+var width = Dimensions.get("window").width; //full width
+var height = Dimensions.get("window").height; //full height
+const styles = StyleSheet.create({
+  title: {
+    textAlign: "center",
+    justifyContent: "center",
+  },
+  headerTitleAlign: "center",
+  header: {
+    backgroundColor: "white",
+    width: width,
+    height: height,
+  },
+  object: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    paddingLeft: 10,
+  },
+  title: {
+    textAlign: "center",
+    fontSize: 25,
+    fontWeight: "bold",
+  },
+  button: {
+    margin: 10,
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image: {
+    margin: 20,
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    top: 20,
+  },
+  img: {
+    width: 130,
+    height: 130,
+  },
+  count: {
+    margin: 10,
+  },
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    width: 150,
+    top: 20,
+    padding: 15,
+    borderRadius: 100 / 2,
+    backgroundColor: "#84daa9",
+  },
+  titlefeedback: {
+    textAlign: "center",
+    fontSize: 25,
+    fontWeight: "bold",
+  },
+  feeback: {
+    top: 10,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
