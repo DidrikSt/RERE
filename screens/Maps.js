@@ -41,7 +41,9 @@ function Maps() {
 const styles = StyleSheet.create({
   container: {
     // position: "absolute",
-    top: 15,
+    marginRight: 0,
+    marginLeft: 0,
+    top: 0,
   },
   map: {
     top: 150,
