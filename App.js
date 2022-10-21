@@ -2,8 +2,8 @@ import * as React from "react";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { HomeScreen } from "./screens/HomeScreen";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Maps } from "./screens/Maps";
 import { Info } from "./screens/Info";
 import { Store } from "./screens/Store";
@@ -17,19 +17,19 @@ function MyTabs() {
           let iconName;
 
           if (route.name === "HomeScreen") {
-            iconName = focused ? "home-outline" : "home-outline";
+            iconName = focused ? "home" : "home";
           } else if (route.name === "Maps") {
-            iconName = focused ? "map-outline" : "map-outline";
+            iconName = focused ? "map-search" : "map-search";
           } else if (route.name === "Info") {
             iconName = focused
-              ? "information-circle-outline"
-              : "information-circle-outline";
+              ? "information-variant"
+              : "information-variant";
           } else if (route.name === "Store") {
-            iconName = focused ? "cash-outline" : "cash-outline";
+            iconName = focused ? "store" : "store";
           }
 
           // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: "#84daa9",
         tabBarInactiveTintColor: "gray",
