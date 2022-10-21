@@ -9,7 +9,6 @@ import { Info } from "./screens/Info";
 import { Store } from "./screens/Store";
 
 const Tab = createBottomTabNavigator();
-
 function MyTabs() {
   return (
     <Tab.Navigator
