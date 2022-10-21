@@ -3,11 +3,10 @@ import { StyleSheet, Text, View, Dimensions} from "react-native";
 import { useRoute } from "@react-navigation/native";
 
 function Info() {
-  const route = useRoute();
   return (
     <View style={styles.container}>
       <View style={styles.text}>
-      <Text>Fakta</Text>
+      <Text style={styles.header}>Fakta</Text>
       </View>
     </View>
   );
@@ -16,16 +15,12 @@ function Info() {
 const styles = StyleSheet.create({
   container: {
     // position: "absolute",
-    marginRight: 15,
-  },
-  image: {
     flex: 1,
-    justifyContent: "center"
+    fontSize: 25,
+    alignItems: "center",
   },
-  text:{
-    flex: 1,
-    marginLeft: 15,
-    top: 15,
+  header:{
+    fontSize: 25,
   }
 });
 

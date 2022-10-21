@@ -1,11 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Dimensions, SafeAreaView } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import MapView from "react-native-maps";
 
 function Maps() {
   const route = useRoute();
   return (
+    <SafeAreaView style={styles.header}>
     <View style={styles.container}>
       <View>
         <Text style={styles.total}>Antal enheter:</Text>
@@ -35,10 +36,16 @@ function Maps() {
         />
       </MapView>
     </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  header: {
+    backgroundColor: "white",
+    flex: 1,
+    height: 2000,
+  },
   container: {
     // position: "absolute",
     marginRight: 0,

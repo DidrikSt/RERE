@@ -7,41 +7,41 @@ function Store() {
        <View style={styles.image}>
         <View style={styles.object}>
           <Text>Skärmskydd</Text>
-          <Image source={require("../img/mobil.jpg")} style={styles.img} />
-          <View style={styles.container}>
+          <Image source={require("../img/skydd.png")} style={styles.img} />
           <TouchableOpacity>
+          <View style={styles.container}>
           <Text>100</Text>
+          </View>
           </TouchableOpacity>
-        </View>
         </View>
         <View style={styles.object}>
           <Text>Mobilskal</Text>
-          <Image source={require("../img/laptop.jpg")} style={styles.img} />
-          <View style={styles.container}>
+          <Image source={require("../img/skal.jpeg")} style={styles.img} />
           <TouchableOpacity>
+          <View style={styles.container}>
           <Text>300</Text>
+          </View>
           </TouchableOpacity>
-        </View>
         </View>
       </View>
       <View style={styles.image}>
         <View style={styles.object}>
           <Text>Skärmreparation</Text>
-          <Image source={require("../img/skarm.jpg")} style={styles.img} />
-          <View style={styles.container}>
+          <Image source={require("../img/trasig.jpg")} style={styles.img} />
           <TouchableOpacity>
+          <View style={styles.container}>
           <Text>300</Text>
+          </View>
           </TouchableOpacity>
-        </View>
         </View>
         <View style={styles.object}>
           <Text>Härdat glas</Text>
-          <Image source={require("../img/stationar.jpg")} style={styles.img} />
-          <View style={styles.container}>
+          <Image source={require("../img/glass.jpg")} style={styles.img} />
           <TouchableOpacity>
+          <View style={styles.container}>
           <Text>300</Text>
+          </View>
           </TouchableOpacity>
-        </View>
         </View>
       </View>
     </SafeAreaView>

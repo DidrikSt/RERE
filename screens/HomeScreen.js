@@ -156,9 +156,6 @@ const styles = StyleSheet.create({
     height: 2000,
     paddingTop: StatusBar.currentHeight,
   },
-  scroll: {
-    backgroundColor: "white",
-  },
   object: {
     flex: 1,
     flexDirection: "column",
