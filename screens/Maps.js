@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import MapView from 'react-native-maps';
@@ -9,14 +9,14 @@ function Maps() {
   const route = useRoute();
   return (
     <View style={styles.container}>
-      <View>
+      {/* <View>
           <Text style={styles.total}>Antal enheter:</Text>
           <Text>Mobil: {route.params.count} st</Text>
           <Text>Laptop: {route.params.count1} st</Text>
           <Text>Skärm: {route.params.count2} st</Text>
           <Text>Stationär: {route.params.count3} st </Text>
           <Text>Total: {route.params.totalall} kg CO₂</Text>
-      </View> 
+      </View>  */}
 
 
       <MapView style={styles.map}
@@ -36,16 +36,17 @@ function Maps() {
           />
           
       </MapView>
-        </View>
+    </View>
 
   );
 }
 export { Maps };
 const styles = StyleSheet.create({
   container: {
-    position: "absolute",
-    marginLeft: 10,
-    top: 20,
+    // position: "absolute",
+    marginRight: 15,
+    marginLeft: 15,
+    top: 15,
   },
   map:{
     width: Dimensions.get('window').width,
