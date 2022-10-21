@@ -9,14 +9,14 @@ function Maps() {
   const route = useRoute();
   return (
     <View style={styles.container}>
-      {/* <View>
+      <View>
           <Text style={styles.total}>Antal enheter:</Text>
           <Text>Mobil: {route.params.count} st</Text>
           <Text>Laptop: {route.params.count1} st</Text>
           <Text>Skärm: {route.params.count2} st</Text>
           <Text>Stationär: {route.params.count3} st </Text>
           <Text>Total: {route.params.totalall} kg CO₂</Text>
-      </View>  */}
+      </View> 
 
 
       <MapView style={styles.map}
@@ -44,9 +44,9 @@ export { Maps };
 const styles = StyleSheet.create({
   container: {
     // position: "absolute",
-    marginRight: 15,
-    marginLeft: 15,
-    top: 15,
+    marginRight: 0,
+    marginLeft: 0,
+    top: 0,
   },
   map:{
     width: Dimensions.get('window').width,
