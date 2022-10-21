@@ -1,7 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
+import { useRoute } from "@react-navigation/native";
 
 function Info() {
+  const route = useRoute();
   return (
     <View style={styles.container}>
       <Text>Fakta</Text>
@@ -11,9 +13,10 @@ function Info() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    // position: "absolute",
+    marginRight: 15,
+    marginLeft: 15,
+    top: 15,
   },
 });
 
