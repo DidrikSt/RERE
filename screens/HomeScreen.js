@@ -126,11 +126,11 @@ function HomeScreen({ navigation }) {
           {totalall} kg CO₂
         </Text>
       </View>
-      <View style={styles.container}>
-        <TouchableOpacity onPress={register}>
+      <TouchableOpacity onPress={register}>
+        <View style={styles.container}>
           <Text>Lämna in</Text>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
