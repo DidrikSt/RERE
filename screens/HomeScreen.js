@@ -4,10 +4,12 @@ import {
   Button,
   View,
   SafeAreaView,
+  ScrollView,
   Text,
   Alert,
   Image,
   Dimensions,
+  StatusBar,
 } from "react-native";
 import { useState } from "react";
 function HomeScreen({ navigation }) {
@@ -63,18 +65,26 @@ function HomeScreen({ navigation }) {
           <Text>Mobil</Text>
           <Image source={require("../img/mobil.jpg")} style={styles.img} />
           <View style={styles.button}>
-            <Button title="-" onPress={onPress2}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress2}>
+              <Text style={styles.add}>-</Text>
+            </TouchableOpacity>
             <Text style={styles.count}> {count} </Text>
-            <Button title="+" onPress={onPress1}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress1}>
+              <Text style={styles.add}>+</Text>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.object}>
           <Text>Laptop</Text>
           <Image source={require("../img/laptop.jpg")} style={styles.img} />
           <View style={styles.button}>
-            <Button title="-" onPress={onPress4}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress4}>
+              <Text style={styles.add}>-</Text>
+            </TouchableOpacity>
             <Text style={styles.count}> {count1} </Text>
-            <Button title="+" onPress={onPress3}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress3}>
+              <Text style={styles.add}>+</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -83,18 +93,26 @@ function HomeScreen({ navigation }) {
           <Text>Skärm</Text>
           <Image source={require("../img/skarm.jpg")} style={styles.img} />
           <View style={styles.button}>
-            <Button title="-" onPress={onPress6}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress6}>
+              <Text style={styles.add}>-</Text>
+            </TouchableOpacity>
             <Text style={styles.count}> {count2} </Text>
-            <Button title="+" onPress={onPress5}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress5}>
+              <Text style={styles.add}>+</Text>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.object}>
           <Text>Stationär</Text>
           <Image source={require("../img/stationar.jpg")} style={styles.img} />
           <View style={styles.button}>
-            <Button title="-" onPress={onPress8}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress8}>
+              <Text style={styles.add}>-</Text>
+            </TouchableOpacity>
             <Text style={styles.count}> {count3} </Text>
-            <Button title="+" onPress={onPress7}></Button>
+            <TouchableOpacity style={styles.knapp} onPress={onPress7}>
+              <Text style={styles.add}>+</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -117,9 +135,16 @@ function HomeScreen({ navigation }) {
   );
 }
 export { HomeScreen };
-var width = Dimensions.get("window").width; //full width
-var height = Dimensions.get("window").height; //full height
 const styles = StyleSheet.create({
+  knapp: {
+    width: 25,
+    height: 35,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  add: {
+    fontSize: 20,
+  },
   title: {
     textAlign: "center",
     justifyContent: "center",
@@ -127,8 +152,12 @@ const styles = StyleSheet.create({
   headerTitleAlign: "center",
   header: {
     backgroundColor: "white",
-    width: width,
-    height: height,
+    flex: 1,
+    height: 2000,
+    paddingTop: StatusBar.currentHeight,
+  },
+  scroll: {
+    backgroundColor: "white",
   },
   object: {
     flex: 1,
@@ -151,18 +180,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    margin: 20,
+    margin: 10,
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     alignContent: "center",
     alignItems: "center",
     justifyContent: "center",
-    top: 20,
+    top: 0,
   },
   img: {
-    width: 130,
-    height: 130,
+    width: 100,
+    height: 100,
   },
   count: {
     margin: 10,
@@ -172,7 +201,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignSelf: "center",
     width: 150,
-    top: 20,
+    top: 15,
     padding: 15,
     borderRadius: 100 / 2,
     backgroundColor: "#84daa9",
@@ -183,7 +212,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   feeback: {
-    top: 10,
+    top: 0,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
