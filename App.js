@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { Maps } from "./screens/Maps";
 import { Info } from "./screens/Info";
 import { Store } from "./screens/Store";
+import { Profile } from "./screens/Profile";
 
 const Tab = createBottomTabNavigator();
 function MyTabs() {
@@ -26,6 +27,8 @@ function MyTabs() {
               : "information-variant";
           } else if (route.name === "Store") {
             iconName = focused ? "store" : "store";
+          }else if (route.name === "Profile") {
+            iconName = focused ? "account" : "account";
           }
 
           // You can return any component that you like here!
@@ -70,6 +73,16 @@ function MyTabs() {
         component={Store}
         options={{
           title: "Store",
+
+          // Center the header title on Android
+          headerTitleAlign: "center",
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          title: "Profile",
 
           // Center the header title on Android
           headerTitleAlign: "center",

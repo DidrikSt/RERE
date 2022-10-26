@@ -12,6 +12,8 @@ import {
   StatusBar,
 } from "react-native";
 import { useState } from "react";
+
+
 function HomeScreen({ navigation }) {
   const [count, setCount] = useState(0);
   const onPress1 = () => setCount((prevCount) => prevCount + 1);
@@ -47,8 +49,19 @@ function HomeScreen({ navigation }) {
     }
   };
   const total3 = count3 * 150;
+  const totalenhet = count + count1 + count2 + count3;
   const totalall = total + total1 + total2 + total3;
+
+
+  
   const register = () => {
+    navigation.navigate("Profile", {
+      totalenhet: totalenhet,
+      count: count,
+      count1: count1,
+      count2: count2,
+      count3: count3,
+    })
     navigation.navigate("Maps", {
       totalall: totalall,
       count: count,
