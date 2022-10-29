@@ -1,16 +1,26 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from "react-native";
+import { useRoute } from "@react-navigation/native";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function Store() {
+  const route = useRoute();
+  const { count, count1, count2, count3 } = route.params;
+  const coins = (count * 100) + (count1 * 250) + (count2 * 300) + (count3 * 250);
   return (
     <SafeAreaView style={styles.header}>
+      <View style={styles.cash}> 
+      <MaterialCommunityIcons name="cash" size={40} color="#18ad22" />
+        <Text style={styles.coin}>{coins} Poäng</Text>
+        <MaterialCommunityIcons name="cash" size={40} color="#18ad22" />
+      </View>
        <View style={styles.image}>
         <View style={styles.object}>
           <Text>Skärmskydd</Text>
           <Image source={require("../img/skydd.png")} style={styles.img} />
           <TouchableOpacity>
           <View style={styles.container}>
-          <Text>100</Text>
+          <Text>4500</Text>
           </View>
           </TouchableOpacity>
         </View>
@@ -19,7 +29,7 @@ function Store() {
           <Image source={require("../img/skal.jpeg")} style={styles.img} />
           <TouchableOpacity>
           <View style={styles.container}>
-          <Text>300</Text>
+          <Text>12000</Text>
           </View>
           </TouchableOpacity>
         </View>
@@ -30,7 +40,7 @@ function Store() {
           <Image source={require("../img/trasig.jpg")} style={styles.img} />
           <TouchableOpacity>
           <View style={styles.container}>
-          <Text>300</Text>
+          <Text>8000</Text>
           </View>
           </TouchableOpacity>
         </View>
@@ -39,7 +49,7 @@ function Store() {
           <Image source={require("../img/glass.jpg")} style={styles.img} />
           <TouchableOpacity>
           <View style={styles.container}>
-          <Text>300</Text>
+          <Text>7000</Text>
           </View>
           </TouchableOpacity>
         </View>
@@ -59,6 +69,16 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     width: width,
     height: height,
+    alignItems: "center"
+  },
+  cash: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  coin: {
+    fontWeight:"bold",
+    marginTop: 10,
   },
   image: {
     margin: 20,

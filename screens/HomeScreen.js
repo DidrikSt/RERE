@@ -62,6 +62,12 @@ function HomeScreen({ navigation }) {
       count2: count2,
       count3: count3,
     })
+    navigation.navigate("Store", {
+      count: count,
+      count1: count1,
+      count2: count2,
+      count3: count3,
+    })
     navigation.navigate("Maps", {
       totalall: totalall,
       count: count,
